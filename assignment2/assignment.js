@@ -30,3 +30,47 @@ for (let i = 1; i <= 5; i++) {
       break;
   }
 }
+
+
+// task 2: sum of odd numbers between a limit
+
+
+
+
+const limit = parseInt(readlineSync.question(`Enter a limit : `));
+let sum = 0;
+
+for (i=1;i<=limit;i++) {
+  if( i% 2 !== 0) {
+    sum = sum + i;
+  }
+}
+
+console.log(`Sum of odd numbers : `,sum);
+
+
+
+// task 3 :Even numbers in the array
+
+const limits =  parseInt(readlineSync.question(`Enter the array limit :`));
+const array = [];
+
+console.log('Enter the values of array:');
+for(i=0 ;i<=limits; i++){
+  const value = parseInt(readlineSync.question(`Value ${i+1}: `));
+  array.push(value)
+}
+
+
+let evenCount = 0;
+for(i=0 ;i< array.length; i++){
+ if(array[i] % 2 === 0){
+  evenCount++;
+ }
+}
+
+console.log(`Number of Even number in the given array is:`,evenCount);
+
+
+
+
