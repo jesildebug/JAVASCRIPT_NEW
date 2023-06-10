@@ -1,0 +1,34 @@
+<!-- Write a JavaScript program to change the  color given text in p tag   -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="colorSelect">
+        <option>Red</option>
+        <option>Green</option>
+        <option>White</option>
+        <option>Black</option>
+        </select>
+        <button id="changeColor">change Color </button>
+        <p id="display">”sample test….” </p>
+   <script>
+      
+     const colorSelect = document.getElementById('colorSelect');
+     const display = document.getElementById('display');
+     const changeColor = document.getElementById('changeColor');
+
+     changeColor.onclick = () => {
+        display.style.color = colorSelect.value;
+      }
+
+   </script> 
+</body>
+</html>
+        
+

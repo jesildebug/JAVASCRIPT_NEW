@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Images</title>
+    <style>
+        img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Images</h1>
+    <button onclick="displayRandomImage()"> show random images</button>
+    <br>
+    <img id="randomImage">
+
+    <script>
+         const imageList = [
+      "http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg",
+      "http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg",
+      "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg"
+    ];
+
+    // 1. display the image at that index from the array
+     const displayRandomImage = () => {
+        const randomIndex = getRandomIndex(imageList.length);
+        const randomImage = imageList[randomIndex];
+        document.getElementById('randomImage').src = randomImage
+       
+        
+    }
+
+     //  generate a random index between 0 and max
+   
+
+    const getRandomIndex = (max) => {
+      return Math.floor(Math.random() * max);
+    };
+
+     </script>
+
+
+
+    
+    
+</body>
+</html>
